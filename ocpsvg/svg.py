@@ -20,14 +20,26 @@ from typing import (
 )
 
 import svgelements
-from OCP.BRepAdaptor import BRepAdaptor_Curve
-from OCP.BRepBuilderAPI import BRepBuilderAPI_GTransform, BRepBuilderAPI_Transform
-from OCP.Geom import Geom_BezierCurve
-from OCP.GeomAbs import GeomAbs_CurveType
-from OCP.GeomAdaptor import GeomAdaptor_Curve
-from OCP.gp import gp_Ax1, gp_Dir, gp_GTrsf, gp_Pnt, gp_Trsf, gp_Vec
-from OCP.StdFail import StdFail_NotDone
-from OCP.TopoDS import TopoDS, TopoDS_Edge, TopoDS_Face, TopoDS_Shape, TopoDS_Wire
+from ._occt import (
+    BRepAdaptor_Curve,
+    BRepBuilderAPI_GTransform,
+    BRepBuilderAPI_Transform,
+    Geom_BezierCurve,
+    GeomAbs_CurveType,
+    GeomAdaptor_Curve,
+    gp_Ax1,
+    gp_Dir,
+    gp_GTrsf,
+    gp_Pnt,
+    gp_Trsf,
+    gp_Vec,
+    StdFail_NotDone,
+    TopoDS,
+    TopoDS_Edge,
+    TopoDS_Face,
+    TopoDS_Shape,
+    TopoDS_Wire,
+)
 
 from .ocp import (
     CurveOrAdaptor,

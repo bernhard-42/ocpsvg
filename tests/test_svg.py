@@ -9,12 +9,25 @@ from typing import Any, Counter, Sequence, Union
 
 import pytest
 import svgelements
-from OCP.BRepBuilderAPI import BRepBuilderAPI_Transform
-from OCP.GC import GC_MakeArcOfCircle
-from OCP.Geom import Geom_Circle, Geom_Curve, Geom_Ellipse, Geom_TrimmedCurve
-from OCP.GeomAbs import GeomAbs_CurveType
-from OCP.gp import gp_Ax2, gp_Circ, gp_Pnt, gp_Trsf, gp_Vec
-from OCP.TopoDS import TopoDS, TopoDS_Edge, TopoDS_Face, TopoDS_Shape, TopoDS_Wire
+from ocpsvg._occt import (
+    BRepBuilderAPI_Transform,
+    GC_MakeArcOfCircle,
+    Geom_Circle,
+    Geom_Curve,
+    Geom_Ellipse,
+    Geom_TrimmedCurve,
+    GeomAbs_CurveType,
+    gp_Ax2,
+    gp_Circ,
+    gp_Pnt,
+    gp_Trsf,
+    gp_Vec,
+    TopoDS,
+    TopoDS_Edge,
+    TopoDS_Face,
+    TopoDS_Shape,
+    TopoDS_Wire,
+)
 from pytest import approx, raises
 
 from ocpsvg import (

@@ -3,41 +3,38 @@ from itertools import chain
 from math import radians
 from typing import Iterable, Iterator, Optional, Union, cast
 
-from OCP.Bnd import Bnd_Box
-from OCP.BRep import BRep_Tool
-from OCP.BRepAdaptor import BRepAdaptor_Curve
-from OCP.BRepBndLib import BRepBndLib
-from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeEdge, BRepBuilderAPI_MakeFace
-from OCP.BRepFeat import BRepFeat
-from OCP.BRepGProp import BRepGProp_Face
-from OCP.BRepLib import BRepLib_FindSurface
-from OCP.BRepTools import BRepTools, BRepTools_WireExplorer
-from OCP.Convert import Convert_ParameterisationType
-from OCP.GC import (
+from ._occt import (
+    Array1_gp_Pnt,
+    Bnd_Box,
+    BRep_Tool,
+    BRepAdaptor_Curve,
+    BRepBndLib,
+    BRepBuilderAPI_MakeEdge,
+    BRepBuilderAPI_MakeFace,
+    BRepFeat,
+    BRepGProp_Face,
+    BRepLib_FindSurface,
+    BRepTools,
+    BRepTools_WireExplorer,
+    Convert_ParameterisationType,
     GC_MakeArcOfCircle,
     GC_MakeArcOfEllipse,
     GC_MakeCircle,
     GC_MakeEllipse,
     GC_MakeSegment,
-)
-from OCP.GCPnts import GCPnts_QuasiUniformDeflection
-from OCP.Geom import (
+    GCPnts_QuasiUniformDeflection,
     Geom_BezierCurve,
     Geom_BSplineCurve,
     Geom_Circle,
     Geom_Curve,
     Geom_Ellipse,
     Geom_TrimmedCurve,
-)
-from OCP.GeomAbs import GeomAbs_CurveType, GeomAbs_Shape
-from OCP.GeomAdaptor import GeomAdaptor_Curve
-from OCP.GeomConvert import (
+    GeomAbs_CurveType,
+    GeomAbs_Shape,
+    GeomAdaptor_Curve,
     GeomConvert,
     GeomConvert_ApproxCurve,
     GeomConvert_BSplineCurveToBezierCurve,
-)
-from OCP.collections import Array1_gp_Pnt
-from OCP.gp import (
     gp_Ax1,
     gp_Ax2,
     gp_Circ,
@@ -46,13 +43,11 @@ from OCP.gp import (
     gp_Pnt,
     gp_Trsf,
     gp_Vec,
-)
-from OCP.ShapeExtend import ShapeExtend_WireData
-from OCP.ShapeFix import ShapeFix_Face
-from OCP.Standard import Standard_Failure
-from OCP.StdFail import StdFail_NotDone
-from OCP.TopAbs import TopAbs_Orientation
-from OCP.TopoDS import (
+    ShapeExtend_WireData,
+    ShapeFix_Face,
+    Standard_Failure,
+    StdFail_NotDone,
+    TopAbs_Orientation,
     TopoDS,
     TopoDS_Builder,
     TopoDS_Compound,

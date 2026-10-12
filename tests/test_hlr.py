@@ -4,9 +4,13 @@ from math import radians
 from typing import Optional
 
 import pytest
-from OCP.BRepPrimAPI import BRepPrimAPI_MakeCylinder
-from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt
-from OCP.TopoDS import TopoDS_Shape
+from ocpsvg._occt import (
+    BRepPrimAPI_MakeCylinder,
+    gp_Ax2,
+    gp_Dir,
+    gp_Pnt,
+    TopoDS_Shape,
+)
 
 from ocpsvg.hlr import HiddenLineRenderer, Padding, basic_style, write_svg
 from ocpsvg.ocp import edge_from_curve, segment_curve

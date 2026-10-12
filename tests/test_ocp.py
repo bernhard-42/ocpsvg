@@ -1,12 +1,17 @@
 from typing import Iterable, Union
 
 import pytest
-from OCP.BRepAdaptor import BRepAdaptor_Curve
-from OCP.Geom import Geom_BezierCurve, Geom_Curve, Geom_TrimmedCurve
-from OCP.GeomAdaptor import GeomAdaptor_Curve
-from OCP.gp import gp_Pnt, gp_Vec
-from OCP.ShapeExtend import ShapeExtend_WireData
-from OCP.TopoDS import TopoDS_Wire
+from ocpsvg._occt import (
+    BRepAdaptor_Curve,
+    Geom_BezierCurve,
+    Geom_Curve,
+    Geom_TrimmedCurve,
+    GeomAdaptor_Curve,
+    gp_Pnt,
+    gp_Vec,
+    ShapeExtend_WireData,
+    TopoDS_Wire,
+)
 from pytest import approx, raises
 
 from ocpsvg.ocp import (

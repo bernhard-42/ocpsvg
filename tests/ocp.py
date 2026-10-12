@@ -1,14 +1,21 @@
 from typing import Iterable
 
-from OCP.Bnd import Bnd_Box
-from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeWire
-from OCP.BRepCheck import BRepCheck_Analyzer
-from OCP.BRepGProp import BRepGProp, BRepGProp_Face
-from OCP.BRepTools import BRepTools
-from OCP.collections import List_TopoDS_Shape
-from OCP.gp import gp_Pnt, gp_Vec
-from OCP.GProp import GProp_GProps
-from OCP.TopoDS import TopoDS_Edge, TopoDS_Face, TopoDS_Shape, TopoDS_Wire
+from ocpsvg._occt import (
+    Bnd_Box,
+    BRepBuilderAPI_MakeWire,
+    BRepCheck_Analyzer,
+    BRepGProp,
+    BRepGProp_Face,
+    BRepTools,
+    gp_Pnt,
+    gp_Vec,
+    GProp_GProps,
+    List_TopoDS_Shape,
+    TopoDS_Edge,
+    TopoDS_Face,
+    TopoDS_Shape,
+    TopoDS_Wire,
+)
 
 
 def face_area(face: TopoDS_Face):

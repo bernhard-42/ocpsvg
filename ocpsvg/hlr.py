@@ -17,12 +17,22 @@ from typing import (
 )
 from xml.etree import ElementTree as ET
 
-from OCP.Bnd import Bnd_Box
-from OCP.BRepBuilderAPI import BRepBuilderAPI_Transform
-from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt, gp_Trsf, gp_Vec
-from OCP.HLRAlgo import HLRAlgo_Projector
-from OCP.HLRBRep import HLRBRep_Algo, HLRBRep_HLRToShape, HLRBRep_TypeOfResultingEdge
-from OCP.TopoDS import TopoDS, TopoDS_Edge, TopoDS_Shape
+from ._occt import (
+    Bnd_Box,
+    BRepBuilderAPI_Transform,
+    gp_Ax2,
+    gp_Dir,
+    gp_Pnt,
+    gp_Trsf,
+    gp_Vec,
+    HLRAlgo_Projector,
+    HLRBRep_Algo,
+    HLRBRep_HLRToShape,
+    HLRBRep_TypeOfResultingEdge,
+    TopoDS,
+    TopoDS_Edge,
+    TopoDS_Shape,
+)
 
 from .ocp import bounding_box, topoDS_iterator
 from .svg import edge_to_svg_path, float_formatter, format_svg_path
